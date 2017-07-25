@@ -622,6 +622,14 @@ class Bloch():
             self.axes.text(vec[1], -vec[0], vec[2],
                            annotation['text'], **opts)
 
+    def draw(self):
+        """
+        To update Bloch sphere that has been altered,.
+        """
+        self.render(self.fig, self.axes)
+        if self.fig:
+            plt.draw()
+            
     def show(self):
         """
         Display Bloch sphere and corresponding data sets.
